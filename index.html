@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sreehari S — Aspiring DevOps Engineer</title>
-<meta name="description" content="Portfolio of Sreehari S, an aspiring DevOps Engineer learning cloud, automation and infrastructure.">
-<meta property="og:title" content="Sreehari S — Aspiring DevOps Engineer">
-<meta property="og:description" content="Portfolio of Sreehari S, an aspiring DevOps Engineer learning cloud, automation and infrastructure.">
+<title>Sreehari S — Junior DevOps Engineer</title>
+<meta name="description" content="Portfolio of Sreehari S, a Junior DevOps Engineer specializing in AWS, Terraform, Docker, Kubernetes, CI/CD pipelines, and observability.">
+<meta property="og:title" content="Sreehari S — Junior DevOps Engineer">
+<meta property="og:description" content="Portfolio of Sreehari S, a Junior DevOps Engineer specializing in AWS, Terraform, Docker, Kubernetes, CI/CD pipelines, and observability.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0c0e0d">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23141817%22 stroke=%22%2327c93f%22 stroke-width=%225%22/><text x=%2250%22 y=%2265%22 font-family=%22monospace%22 font-size=%2245%22 font-weight=%22bold%22 fill=%22%2327c93f%22 text-anchor=%22middle%22>SS</text></svg>">
@@ -946,6 +946,61 @@
     transform: translateY(-1px);
   }
 
+  /* ---------- project filters & links ---------- */
+  .proj-filters{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .proj-filter-btn{
+    font-family: var(--font-body);
+    font-size: 11.5px;
+    padding: 6px 14px;
+    border: 1px solid var(--border-bright);
+    background: var(--panel);
+    color: var(--text-dim);
+    border-radius: var(--radius);
+    cursor: none;
+    transition: all 0.2s ease;
+  }
+  .proj-filter-btn:hover, .proj-filter-btn.active{
+    border-color: var(--primary);
+    color: var(--primary);
+    background: rgba(var(--primary-glow-rgb), 0.12);
+    box-shadow: 0 0 10px -2px var(--primary-glow);
+  }
+  .proj-card.filtered-out{
+    display: none !important;
+  }
+  .proj-header-right{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .proj-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: var(--cyan);
+    text-decoration: none;
+    border: 1px solid rgba(111,214,207,0.3);
+    padding: 2px 7px;
+    border-radius: 2px;
+    background: rgba(111,214,207,0.06);
+    transition: all 0.2s ease;
+    cursor: none;
+    line-height: 1.2;
+  }
+  .proj-link:hover{
+    background: var(--cyan);
+    color: #0c0e0d;
+    box-shadow: 0 0 12px var(--cyan-glow);
+    text-decoration: none;
+  }
+
   /* ---------- leadership strip ---------- */
   .leader-grid{
     display:grid;
@@ -1156,8 +1211,8 @@
         <div class="term-body">
           <div id="bootOutput"></div>
           <div class="hero-name" data-text="Sreehari S">Sreehari S</div>
-          <div class="hero-role">Aspiring DevOps Engineer — learning to automate everything</div>
-          <p class="hero-desc">CSE undergrad currently in DevOps training at Zoople Technologies, building foundations in cloud, Linux and automation — one <span class="kw" style="color:var(--cyan)">terraform plan</span> at a time. Not pretending to have it all figured out. Just showing up, learning in public, and shipping what I build.</p>
+          <div class="hero-role">Junior DevOps Engineer — Cloud Infrastructure, CI/CD &amp; Observability</div>
+          <p class="hero-desc">Computer Science graduate building reliable cloud infrastructure, automated CI/CD pipelines, and observability stacks — one <span class="kw" style="color:var(--cyan)">terraform apply</span> at a time. Hands-on with AWS, Kubernetes, and GitOps; currently expanding into GCP &amp; Azure.</p>
           <div class="btn-row">
             <a href="#projects" class="btn primary magnetic">→ view projects</a>
             <a href="Sreehari_S.pdf" target="_blank" rel="noopener" class="btn magnetic">↓ resume</a>
@@ -1176,11 +1231,11 @@
         <div class="term-body">
           <div class="avatar-box">SS</div>
           <div class="neofetch-info">
-            <div class="row"><span class="k">os</span><span class="v">DevOps-in-Training v1.0</span></div>
+            <div class="row"><span class="k">role</span><span class="v">Junior DevOps Engineer</span></div>
             <div class="row"><span class="k">host</span><span class="v">Kollam, Kerala, IN</span></div>
             <div class="row"><span class="k">uptime</span><span class="v">~1 yr learning cloud &amp; infra</span></div>
             <div class="row"><span class="k">shell</span><span class="v">bash</span></div>
-            <div class="row"><span class="k">cloud</span><span class="v">AWS </span></div>
+            <div class="row"><span class="k">cloud</span><span class="v">AWS · learning GCP &amp; Azure</span></div>
             <div class="row"><span class="k">editor</span><span class="v">VS Code</span></div>
             <div class="row"><span class="k">status</span><span class="v" style="color:var(--primary)">open to opportunities</span></div>
             <div class="swatches" id="themeSwatches">
@@ -1200,12 +1255,12 @@
   <section id="about">
     <div class="eyebrow">~/about.sh</div>
     <h2 class="section-title">About</h2>
-    <p class="section-sub">The short version: engineer by training, DevOps by choice, still early — and fine with that.</p>
+    <p class="section-sub">Engineer by training, DevOps by choice — building reliable systems in public.</p>
 
     <div class="about-grid">
       <div class="bio reveal-left">
-        <p>Computer Science graduate with hands-on experience building and automating <span class="kw">CI/CD pipelines</span> using <span class="kw">Docker, Jenkins, Terraform, and Ansible on AWS</span>. Strong foundation in Linux, scripting, and infrastructure as code, with a builder's mindset for creating reliable, automated, and scalable deployment workflows.</p>
-        <p>Currently deepening DevOps expertise through a dedicated <span class="kw">DevOps certification program</span>.</p>
+        <p>I'm <span class="kw">Sreehari S.</span>, a Computer Science graduate focused on <b>DevOps, cloud infrastructure, CI/CD automation, and observability</b>. I build practical, production-grade projects using <span class="kw">AWS, Terraform, Docker, Kubernetes, Jenkins, GitHub Actions, and Argo CD</span>.</p>
+        <p>My work spans <b>serverless incident detection, ECS Fargate deployments, Kubernetes GitOps workflows</b>, and centralized monitoring systems using <b>Prometheus, Grafana, and Loki</b>. I am actively expanding my knowledge of <b>Google Cloud Platform (GCP)</b> and <b>Microsoft Azure</b> while developing my skills in cloud-native infrastructure and reliability engineering.</p>
 
         <table class="edu">
           <tr><th>Qualification</th><th>Institution</th><th>Year</th><th>Score</th></tr>
@@ -1250,33 +1305,39 @@
       </div>
       <div class="term-body yaml-block">
         <div class="yaml-group">
-          <span class="yaml-key">foundations</span>
+          <span class="yaml-key">cloud_and_infrastructure</span>
           <div class="tag-row reveal-stagger">
-            <span class="tag">Linux</span><span class="tag">Git &amp; GitHub</span><span class="tag">Bash Scripting</span><span class="tag">AWS — EC2, S3</span><span class="tag">SQL</span><span class="tag">Ansible</span><span class="tag">Terraform</span>
+            <span class="tag">AWS (Lambda, API Gateway, DynamoDB)</span><span class="tag">AWS (ECS Fargate, ECR, EKS, ALB, VPC)</span><span class="tag">AWS (EC2, S3, IAM, CloudWatch, SNS)</span><span class="tag">Terraform (IaC)</span><span class="tag">Ansible</span><span class="tag">Linux (Ubuntu/Debian)</span><span class="tag">Bash Scripting</span>
           </div>
         </div>
         <div class="yaml-group">
-          <span class="yaml-key">languages</span>
+          <span class="yaml-key">containers_and_kubernetes</span>
           <div class="tag-row reveal-stagger">
-            <span class="tag">Python</span><span class="tag">C</span><span class="tag">C#</span><span class="tag">JavaScript</span><span class="tag">HTML/CSS</span>
+            <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Amazon EKS</span><span class="tag">K3s</span><span class="tag">Helm</span><span class="tag">Argo CD (GitOps)</span><span class="tag">AWS Load Balancer Controller</span><span class="tag">NGINX Ingress</span>
           </div>
         </div>
         <div class="yaml-group">
-          <span class="yaml-key">devops_tools</span>
+          <span class="yaml-key">ci_cd_and_devsecops</span>
           <div class="tag-row reveal-stagger">
-            <span class="tag">Docker</span><span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">Kubernetes</span><span class="tag">Argo CD</span><span class="tag">SonarQube</span><span class="tag">Maven</span><span class="tag">Nginx</span><span class="tag">Docker Hub</span><span class="tag">GHCR</span>
+            <span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">GitHub OIDC</span><span class="tag">SonarQube</span><span class="tag">Pytest</span><span class="tag">Maven</span><span class="tag">Docker Hub</span><span class="tag">Amazon ECR</span><span class="tag">GHCR</span>
           </div>
         </div>
         <div class="yaml-group">
-          <span class="yaml-key">frameworks_and_tools</span>
+          <span class="yaml-key">observability_and_monitoring</span>
           <div class="tag-row reveal-stagger">
-            <span class="tag">.NET Core</span><span class="tag">Flutter</span><span class="tag">MySQL</span><span class="tag">AI/ML basics</span><span class="tag">IoT (Arduino/ESP32)</span>
+            <span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Loki</span><span class="tag">Grafana Alloy</span><span class="tag">Node Exporter</span><span class="tag">AWS CloudWatch</span><span class="tag">Amazon SNS</span><span class="tag">PromQL</span>
+          </div>
+        </div>
+        <div class="yaml-group">
+          <span class="yaml-key">languages_and_databases</span>
+          <div class="tag-row reveal-stagger">
+            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">pgvector</span><span class="tag">SQL</span><span class="tag">C#</span><span class="tag">JavaScript</span><span class="tag">HTML/CSS</span>
           </div>
         </div>
         <div class="yaml-group">
           <span class="yaml-key">currently_learning</span>
           <div class="tag-row reveal-stagger">
-            <span class="tag learning">AWS Solutions Architect</span><span class="tag learning">Monitoring &amp; Observability</span>
+            <span class="tag learning">Google Cloud Platform (GCP)</span><span class="tag learning">Microsoft Azure</span><span class="tag learning">AWS Solutions Architect</span><span class="tag learning">Site Reliability Engineering</span>
           </div>
         </div>
       </div>
@@ -1300,23 +1361,23 @@
         </div>
         <div class="stage">
           <div class="stage-head progress"><span class="stage-dot"></span> STAGE 2 · RUNNING</div>
-          <div class="stage-item d"><span class="mark">✓</span> Ansible</div>
-          <div class="stage-item d"><span class="mark">✓</span> Terraform</div>
-          <div class="stage-item d"><span class="mark">✓</span> Docker &amp; containers</div>
-          <div class="stage-item d"><span class="mark">✓</span> CI/CD (Jenkins &amp; GitHub Actions)</div>
-          <div class="stage-item d"><span class="mark">✓</span> Kubernetes</div>
+          <div class="stage-item d"><span class="mark">✓</span> Terraform &amp; Ansible (IaC)</div>
+          <div class="stage-item d"><span class="mark">✓</span> Docker &amp; ECS Fargate</div>
+          <div class="stage-item d"><span class="mark">✓</span> CI/CD (Jenkins, GitHub Actions, OIDC)</div>
+          <div class="stage-item d"><span class="mark">✓</span> Kubernetes (EKS, K3s, GitOps via Argo CD)</div>
+          <div class="stage-item d"><span class="mark">✓</span> Observability (Prometheus, Grafana, Loki)</div>
           <div class="stage-item p"><span class="mark">●</span> DevOps training @ Zoople</div>
-          <div class="stage-item p"><span class="mark">●</span> Linux system administration</div>
         </div>
         <div class="stage">
-          <div class="stage-head queued"><span class="stage-dot"></span> STAGE 3 · QUEUED</div>
+          <div class="stage-head progress"><span class="stage-dot"></span> STAGE 3 · IN PROGRESS</div>
+          <div class="stage-item p"><span class="mark">●</span> GCP (Google Cloud Platform) basics</div>
+          <div class="stage-item p"><span class="mark">●</span> Microsoft Azure fundamentals</div>
           <div class="stage-item q"><span class="mark">○</span> AWS Solutions Architect track</div>
-          <div class="stage-item q"><span class="mark">○</span> Monitoring &amp; observability</div>
         </div>
         <div class="stage">
           <div class="stage-head queued"><span class="stage-dot"></span> STAGE 4 · QUEUED</div>
-          <div class="stage-item q"><span class="mark">○</span> Production-grade infrastructure</div>
-          <div class="stage-item q"><span class="mark">○</span> First DevOps role</div>
+          <div class="stage-item q"><span class="mark">○</span> Production-grade cloud-native infrastructure</div>
+          <div class="stage-item q"><span class="mark">○</span> Junior DevOps / SRE role</div>
         </div>
       </div>
     </div>
@@ -1326,125 +1387,271 @@
   <section id="projects">
     <div class="eyebrow">~/projects/</div>
     <h2 class="section-title">Projects</h2>
-    <p class="section-sub">From full-stack and IoT to end-to-end DevOps pipelines — projects that show how I think and ship.</p>
+    <p class="section-sub">Production-ready cloud infrastructure, GitOps Kubernetes deployments, and observability platforms — ordered by engineering depth.</p>
 
-    <div class="proj-list-line"><span class="prompt">$</span> ls -la projects/</div>
+    <div class="proj-list-line"><span class="prompt">$</span> ls -la projects/ --sort=depth</div>
 
-    <div class="projects-grid reveal-flip">
+    <!-- Filter Buttons -->
+    <div class="proj-filters" id="projFilters">
+      <button class="proj-filter-btn active" data-filter="all">all [14]</button>
+      <button class="proj-filter-btn" data-filter="cloud">cloud &amp; iac [6]</button>
+      <button class="proj-filter-btn" data-filter="k8s">kubernetes &amp; gitops [6]</button>
+      <button class="proj-filter-btn" data-filter="observability">observability [4]</button>
+      <button class="proj-filter-btn" data-filter="cicd">ci/cd &amp; devsecops [6]</button>
+      <button class="proj-filter-btn" data-filter="academic">ai/iot &amp; academic [3]</button>
+    </div>
 
-      <div class="proj-card" id="projCard1">
+    <div class="projects-grid reveal-flip" id="projectsGrid">
+
+      <!-- 1. CloudOps360 -->
+      <div class="proj-card" id="projCard1" data-category="cloud devops observability cicd">
         <div class="proj-head">
-          <span class="proj-title">NutriFlow — DevOps</span>
-          <span class="proj-badge">DevOps</span>
+          <span class="proj-title">CloudOps360 — Incident Detection &amp; Monitoring</span>
+          <div class="proj-header-right">
+            <a href="https://github.com/Zree77/cloudops360" target="_blank" rel="noopener" class="proj-link">github ↗</a>
+            <span class="proj-badge">Cloud &amp; Observability</span>
+          </div>
         </div>
-        <p class="dim" style="font-size:12px; margin-bottom:10px;">Built the complete DevOps pipeline for a meal subscription platform (React + Express + MongoDB)</p>
+        <p class="dim" style="font-size:12px; margin-bottom:10px;">Serverless incident detection platform combined with containerized metrics &amp; log observability stack</p>
         <ul class="proj-desc">
-          <li>Dockerized frontend &amp; backend with separate Dockerfiles and Nginx reverse proxy</li>
-          <li>Jenkins declarative pipeline: checkout → install → test → SonarQube analysis → Docker build → push to AWS ECR</li>
-          <li>Terraform-provisioned AWS infrastructure (EKS cluster, networking)</li>
-          <li>2-replica Kubernetes deployments with ALB Ingress, ConfigMaps, Secrets &amp; health probes on AWS EKS</li>
+          <li>Deployed serverless FastAPI application via AWS Lambda and API Gateway with DynamoDB persistence</li>
+          <li>CloudWatch logs analyzer for automated incident detection; publishes alerts to Amazon SNS with incident metadata</li>
+          <li>Prometheus metrics for HTTP request volume and latency, paired with real-time Grafana monitoring dashboards</li>
+          <li>Centralized log aggregation using Grafana Alloy &amp; Loki; 38 passing Pytest tests covering API logic, recovery &amp; deduplication</li>
         </ul>
-        <div class="proj-stack"><span>Jenkins</span><span>Docker</span><span>AWS ECR</span><span>AWS EKS</span><span>Kubernetes</span><span>Terraform</span><span>SonarQube</span><span>Nginx</span></div>
+        <div class="proj-stack"><span>AWS Lambda</span><span>API Gateway</span><span>DynamoDB</span><span>CloudWatch</span><span>Amazon SNS</span><span>Python</span><span>FastAPI</span><span>Prometheus</span><span>Grafana</span><span>Loki</span><span>Grafana Alloy</span><span>Docker</span><span>GitHub Actions</span><span>Pytest</span></div>
       </div>
 
-      <div class="proj-card" id="projCard2">
+      <!-- 2. AWS ECS Fargate -->
+      <div class="proj-card" id="projCard2" data-category="cloud devops iac cicd">
         <div class="proj-head">
-          <span class="proj-title">Spring Boot CI/CD Pipeline</span>
-          <span class="proj-badge">DevOps</span>
+          <span class="proj-title">AWS ECS Fargate Deployment</span>
+          <div class="proj-header-right">
+            <span class="proj-badge">IaC &amp; Cloud</span>
+          </div>
         </div>
-        <p class="dim" style="font-size:12px; margin-bottom:10px;">End-to-end CI/CD with Jenkins, SonarQube, Docker, K8s &amp; Argo CD GitOps</p>
+        <p class="dim" style="font-size:12px; margin-bottom:10px;">Production-grade containerized FastAPI deployment on AWS ECS Fargate with reusable Terraform and CI/CD</p>
         <ul class="proj-desc">
-          <li>Jenkins declarative pipeline: checkout → Maven build → SonarQube → Docker → Docker Hub → GitOps</li>
-          <li>Automated K8s manifest updates with versioned Docker images &amp; [skip ci] commits</li>
-          <li>2-replica Kubernetes deployment with NodePort service on port 8080</li>
-          <li>Argo CD GitOps-based continuous delivery syncing from GitHub manifests</li>
+          <li>Provisioned AWS VPC, public/private subnets, security groups, and Application Load Balancer using modular Terraform</li>
+          <li>Deployed containerized FastAPI on ECS Fargate across 2 running tasks with ALB health checks</li>
+          <li>GitHub Actions CI/CD pipeline for automated testing, container builds, and publishing images to Amazon ECR</li>
+          <li>Secure authentication via GitHub OIDC without long-lived AWS keys; CloudWatch CPU alarms with SNS email alerts</li>
+        </ul>
+        <div class="proj-stack"><span>AWS ECS Fargate</span><span>Amazon ECR</span><span>Application Load Balancer</span><span>VPC</span><span>Terraform</span><span>Docker</span><span>GitHub Actions</span><span>OIDC</span><span>CloudWatch</span><span>Amazon SNS</span><span>FastAPI</span><span>Python</span></div>
+      </div>
+
+      <!-- 3. NutriFlow -->
+      <div class="proj-card" id="projCard3" data-category="k8s devops gitops cloud cicd">
+        <div class="proj-head">
+          <span class="proj-title">NutriFlow — GitOps on AWS EKS</span>
+          <div class="proj-header-right">
+            <span class="proj-badge">GitOps &amp; K8s</span>
+          </div>
+        </div>
+        <p class="dim" style="font-size:12px; margin-bottom:10px;">GitOps continuous delivery and cloud infrastructure automation for a meal-subscription platform on Amazon EKS</p>
+        <ul class="proj-desc">
+          <li>Jenkins declarative CI/CD pipeline automating testing, SonarQube quality gate analysis, Docker builds &amp; ECR pushes</li>
+          <li>Reusable Terraform modules provisioning AWS networking and production Amazon EKS cluster</li>
+          <li>Argo CD GitOps continuous delivery synchronizing Kubernetes manifests directly from Git with zero drift</li>
+          <li>Multi-replica Kubernetes deployments with AWS ALB Ingress, ConfigMaps, Secrets, health probes &amp; resource quotas</li>
+        </ul>
+        <div class="proj-stack"><span>Amazon EKS</span><span>Amazon ECR</span><span>Kubernetes</span><span>Argo CD</span><span>Terraform</span><span>Jenkins</span><span>SonarQube</span><span>Docker</span><span>ALB Ingress</span></div>
+      </div>
+
+      <!-- 4. Multi-VM Infrastructure Monitoring -->
+      <div class="proj-card" id="projCard4" data-category="observability cloud devops">
+        <div class="proj-head">
+          <span class="proj-title">Multi-VM Infrastructure Monitoring</span>
+          <div class="proj-header-right">
+            <span class="proj-badge">Observability</span>
+          </div>
+        </div>
+        <p class="dim" style="font-size:12px; margin-bottom:10px;">Multi-instance infrastructure and application observability setup on AWS EC2 with Prometheus &amp; Grafana</p>
+        <ul class="proj-desc">
+          <li>3-instance AWS EC2 monitoring architecture featuring 1 central Prometheus server and 2 distributed worker nodes</li>
+          <li>Node Exporter on worker nodes exposing host-level CPU, memory, disk &amp; network metrics over private IPs</li>
+          <li>Instrumented a custom Python Flask application with Prometheus metrics to observe application latency and error rates</li>
+          <li>Centralized Grafana dashboards with PromQL-based alerting rules for CPU utilization and error thresholds</li>
+        </ul>
+        <div class="proj-stack"><span>AWS EC2</span><span>Prometheus</span><span>Grafana</span><span>Node Exporter</span><span>Python</span><span>Flask</span><span>PromQL</span><span>Linux</span><span>Security Groups</span></div>
+      </div>
+
+      <!-- 5. Kubernetes Deployment with K3s -->
+      <div class="proj-card" id="projCard5" data-category="k8s observability cloud devops">
+        <div class="proj-head">
+          <span class="proj-title">Kubernetes Deployment &amp; Monitoring with K3s</span>
+          <div class="proj-header-right">
+            <span class="proj-badge">Kubernetes</span>
+          </div>
+        </div>
+        <p class="dim" style="font-size:12px; margin-bottom:10px;">Lightweight Kubernetes lab on AWS EC2 integrated with isolated infrastructure and application monitoring</p>
+        <ul class="proj-desc">
+          <li>Configured a lightweight K3s Kubernetes cluster on AWS EC2 with namespace isolation and service discovery</li>
+          <li>Deployed containerized applications with ClusterIP and NodePort services for external and internal traffic</li>
+          <li>Separated Kubernetes workloads and the Prometheus/Grafana monitoring stack across distinct EC2 instances</li>
+          <li>Centralized visualization of cluster health, pod resource metrics, and Linux host statistics</li>
+        </ul>
+        <div class="proj-stack"><span>AWS EC2</span><span>K3s</span><span>Kubernetes</span><span>Docker</span><span>Prometheus</span><span>Grafana</span><span>Node Exporter</span><span>Linux</span></div>
+      </div>
+
+      <!-- 6. AWS ALB Ingress Controller on EKS -->
+      <div class="proj-card" id="projCard6" data-category="k8s cloud devops">
+        <div class="proj-head">
+          <span class="proj-title">AWS ALB Ingress Controller on EKS</span>
+          <div class="proj-header-right">
+            <span class="proj-badge">K8s Networking</span>
+          </div>
+        </div>
+        <p class="dim" style="font-size:12px; margin-bottom:10px;">Ingress traffic routing on Amazon EKS using AWS Load Balancer Controller, Helm, and Application Load Balancer</p>
+        <ul class="proj-desc">
+          <li>Installed and configured the AWS Load Balancer Controller on Amazon EKS using Helm and IAM service account roles (IRSA)</li>
+          <li>Provisioned internet-facing Application Load Balancer with IP-based target registration using Kubernetes Ingress</li>
+          <li>Implemented host-based traffic routing, TLS termination, webhook certificates, and CA bundles</li>
+          <li>Troubleshot HTTP 404 responses and resolved host-routing behavior by validating request headers and ALB target groups</li>
+        </ul>
+        <div class="proj-stack"><span>Amazon EKS</span><span>AWS Load Balancer Controller</span><span>ALB</span><span>Kubernetes Ingress</span><span>Helm</span><span>IAM</span><span>TLS</span><span>DNS</span></div>
+      </div>
+
+      <!-- 7. SECLOCK -->
+      <div class="proj-card" id="projCard7" data-category="k8s devops gitops cicd">
+        <div class="proj-head">
+          <span class="proj-title">SECLOCK — DevSecOps Pipeline &amp; EKS</span>
+          <div class="proj-header-right">
+            <a href="https://github.com/Zree77/seclock" target="_blank" rel="noopener" class="proj-link">github ↗</a>
+            <span class="proj-badge">DevSecOps</span>
+          </div>
+        </div>
+        <p class="dim" style="font-size:12px; margin-bottom:10px;">Automated security testing, containerization, static code analysis, and Kubernetes GitOps delivery</p>
+        <ul class="proj-desc">
+          <li>Containerized FastAPI application with optimized Dockerfile and automated environment isolation</li>
+          <li>Jenkins CI/CD pipeline automating 9 verification tests, SonarQube security quality gate, and AWS ECR image pushes</li>
+          <li>Automated Kubernetes manifest updates with image version tags and [skip ci] commit flags to prevent build loops</li>
+          <li>Argo CD GitOps continuous synchronization deploying 2-replica workloads to Amazon EKS with resource limits</li>
+        </ul>
+        <div class="proj-stack"><span>Python</span><span>FastAPI</span><span>Docker</span><span>AWS ECR</span><span>Amazon EKS</span><span>Jenkins</span><span>SonarQube</span><span>Argo CD</span><span>Kubernetes</span></div>
+      </div>
+
+      <!-- 8. Automated Cloud Deployment -->
+      <div class="proj-card" id="projCard8" data-category="cloud devops iac cicd">
+        <div class="proj-head">
+          <span class="proj-title">Automated Cloud Deployment</span>
+          <div class="proj-header-right">
+            <span class="proj-badge">IaC &amp; Ansible</span>
+          </div>
+        </div>
+        <p class="dim" style="font-size:12px; margin-bottom:10px;">Automated cloud provisioning, configuration management, and application delivery on AWS EC2</p>
+        <ul class="proj-desc">
+          <li>Provisioned AWS EC2 infrastructure using Terraform with automated user-data initialization scripts</li>
+          <li>Configured host software, Docker daemon, and system requirements via Ansible configuration management playbooks</li>
+          <li>Automated Jenkins CI/CD pipeline coordinating build, test, and container registry publishing with Docker Hub</li>
+          <li>Configured GitHub webhook triggers and secure SSH key-based communication between automation server and target host</li>
+        </ul>
+        <div class="proj-stack"><span>Terraform</span><span>AWS EC2</span><span>Docker</span><span>Ansible</span><span>Jenkins</span><span>GitHub</span><span>Docker Hub</span><span>Bash</span></div>
+      </div>
+
+      <!-- 9. Spring Boot CI/CD -->
+      <div class="proj-card" id="projCard9" data-category="k8s devops gitops cicd">
+        <div class="proj-head">
+          <span class="proj-title">Spring Boot CI/CD &amp; GitOps Pipeline</span>
+          <div class="proj-header-right">
+            <span class="proj-badge">GitOps &amp; CI/CD</span>
+          </div>
+        </div>
+        <p class="dim" style="font-size:12px; margin-bottom:10px;">Declarative pipeline with Jenkins, SonarQube quality gate, Docker, and Argo CD GitOps for Spring Boot</p>
+        <ul class="proj-desc">
+          <li>Jenkins declarative pipeline: source checkout → Maven build → SonarQube static code analysis → Docker build</li>
+          <li>Automated push to Docker Hub and programmatic Kubernetes manifest repo updates with [skip ci] commits</li>
+          <li>Argo CD continuous delivery syncing declarative Kubernetes manifests to achieve Git-driven deployments</li>
+          <li>2-replica Kubernetes deployment with NodePort service exposure, resource quotas, and health probes</li>
         </ul>
         <div class="proj-stack"><span>Jenkins</span><span>SonarQube</span><span>Docker</span><span>Kubernetes</span><span>Argo CD</span><span>Maven</span><span>Spring Boot</span><span>Java</span></div>
       </div>
 
-      <div class="proj-card" id="projCard3">
+      <!-- 10. CloudRAG-DevOps -->
+      <div class="proj-card" id="projCard10" data-category="cloud devops">
         <div class="proj-head">
-          <span class="proj-title">Automated Cloud Deployment</span>
-          <span class="proj-badge">DevOps</span>
+          <span class="proj-title">CloudRAG-DevOps — Document Processing Backend</span>
+          <div class="proj-header-right">
+            <a href="https://github.com/Zree77/cloudrag-devops" target="_blank" rel="noopener" class="proj-link">github ↗</a>
+            <span class="proj-badge">Backend &amp; pgvector</span>
+          </div>
         </div>
-        <p class="dim" style="font-size:12px; margin-bottom:10px;">End-to-end automated deployment on AWS using IaC, config mgmt &amp; CI/CD</p>
+        <p class="dim" style="font-size:12px; margin-bottom:10px;">Containerized document processing and vector database layer using FastAPI, PostgreSQL, and pgvector</p>
         <ul class="proj-desc">
-          <li>Dockerized web app with Nginx Alpine; Terraform-provisioned EC2</li>
-          <li>Ansible config management &amp; Jenkins CI/CD pipeline</li>
-          <li>Automated build → test → push to Docker Hub → deploy with image versioning</li>
-          <li>GitHub webhook triggers for fully automated pipeline execution</li>
+          <li>Developed FastAPI API endpoints for document uploads, chunk processing, health checks, and readiness validation</li>
+          <li>Integrated PostgreSQL with the pgvector extension to store document metadata, chunks, and vector embeddings</li>
+          <li>Containerized the full application and database environment using Docker Compose for local reproducibility</li>
+          <li>Pytest test suite validating API contracts, health/readiness endpoints, and SQL database persistence</li>
         </ul>
-        <div class="proj-stack"><span>AWS EC2</span><span>Terraform</span><span>Ansible</span><span>Docker</span><span>Jenkins</span><span>Nginx</span><span>Bash</span></div>
+        <div class="proj-stack"><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>pgvector</span><span>Docker</span><span>Docker Compose</span><span>Pytest</span><span>SQL</span></div>
       </div>
 
-      <div class="proj-card" id="projCard4">
+      <!-- 11. Wisecow -->
+      <div class="proj-card" id="projCard11" data-category="k8s devops cicd">
         <div class="proj-head">
-          <span class="proj-title">SecLock — DevOps</span>
-          <span class="proj-badge">DevOps</span>
+          <span class="proj-title">Wisecow K8s CI/CD &amp; HTTPS Ingress</span>
+          <div class="proj-header-right">
+            <span class="proj-badge">Kubernetes</span>
+          </div>
         </div>
-        <p class="dim" style="font-size:12px; margin-bottom:10px;">Built the complete DevOps pipeline for a digital inheritance vault app (FastAPI + Python)</p>
+        <p class="dim" style="font-size:12px; margin-bottom:10px;">Kubernetes deployment with automated GitHub Actions CI/CD, HTTPS Ingress, and system monitoring</p>
         <ul class="proj-desc">
-          <li>Containerized the FastAPI application with optimized Dockerfile</li>
-          <li>Jenkins declarative pipeline: checkout → venv setup → e2e tests → SonarQube analysis → Docker build → push to AWS ECR</li>
-          <li>Automated K8s manifest updates with versioned image tags &amp; [skip ci] commits to prevent build loops</li>
-          <li>2-replica Kubernetes deployment on AWS EKS with resource limits &amp; service exposure</li>
-        </ul>
-        <div class="proj-stack"><span>Jenkins</span><span>Docker</span><span>AWS ECR</span><span>AWS EKS</span><span>Kubernetes</span><span>SonarQube</span></div>
-      </div>
-
-      <div class="proj-card" id="projCard5">
-        <div class="proj-head">
-          <span class="proj-title">Wisecow K8s CI/CD</span>
-          <span class="proj-badge">DevOps</span>
-        </div>
-        <p class="dim" style="font-size:12px; margin-bottom:10px;">Kubernetes deployment with CI/CD, HTTPS ingress &amp; system monitoring</p>
-        <ul class="proj-desc">
-          <li>Containerized Bash app with 2-replica K8s deployment &amp; NodePort service</li>
-          <li>GitHub Actions CI/CD: build → push to GHCR → deploy to Kind cluster</li>
-          <li>NGINX Ingress with TLS/HTTPS; Python HTTP health-check utility</li>
-          <li>Bash system monitor tracking CPU, memory, disk &amp; processes (80% threshold)</li>
+          <li>Containerized Bash application with 2-replica Kubernetes deployment and NodePort service configuration</li>
+          <li>GitHub Actions workflow automating Docker build, tagging, and publishing to GitHub Packages Container Registry (GHCR)</li>
+          <li>Configured NGINX Ingress Controller with TLS certificate termination for secure HTTPS traffic</li>
+          <li>Developed Python HTTP health-check utility and Bash system monitor alerting on CPU/memory exceeding 80%</li>
         </ul>
         <div class="proj-stack"><span>Kubernetes</span><span>Docker</span><span>GitHub Actions</span><span>GHCR</span><span>NGINX Ingress</span><span>TLS</span><span>Python</span><span>Bash</span></div>
       </div>
 
-      <div class="proj-card" id="projCard6">
+      <!-- 12. NovaMotion -->
+      <div class="proj-card" id="projCard12" data-category="academic ai-iot">
         <div class="proj-head">
-          <span class="proj-title">NovaMotion</span>
-          <span class="proj-badge">final year</span>
+          <span class="proj-title">NOVAMOTION — Multimodal Smart Wheelchair</span>
+          <div class="proj-header-right">
+            <span class="proj-badge">Final Year · AI / IoT</span>
+          </div>
         </div>
-        <p class="dim" style="font-size:12px; margin-bottom:10px;">Multimodal smart wheelchair</p>
+        <p class="dim" style="font-size:12px; margin-bottom:10px;">Assistive smart wheelchair prototype supporting eye-gaze tracking, voice commands, joystick &amp; vital telemetry</p>
         <ul class="proj-desc">
-          <li>Controlled via eye-gaze tracking, joystick or voice commands</li>
-          <li>Fall detection &amp; ultrasonic obstacle avoidance for safety</li>
-          <li>Flutter caretaker app with live GPS, vitals and emergency alerts</li>
+          <li>Multimodal user-controlled mobility via L2CS-Net eye-gaze tracking (ONNX), Vosk offline voice recognition, and joystick</li>
+          <li>Distributed embedded architecture: Raspberry Pi 5 high-level processing interfaced with ESP32 for dual-motor control</li>
+          <li>Integrated MAX30102 pulse-oximeter, ultrasonic obstacle avoidance, and GPS module for real-time telemetry</li>
+          <li>Flutter caretaker mobile application displaying live GPS tracking, vital signs monitoring, and instant emergency alerts</li>
         </ul>
-        <div class="proj-stack"><span>Flutter</span><span>Python</span><span>ESP32</span><span>IoT Sensors</span></div>
+        <div class="proj-stack"><span>Raspberry Pi 5</span><span>ESP32</span><span>Python</span><span>Computer Vision</span><span>L2CS-Net</span><span>ONNX</span><span>Vosk</span><span>Flutter</span><span>GPS</span><span>IoT Sensors</span></div>
       </div>
 
-      <div class="proj-card" id="projCard7">
+      <!-- 13. Grievance MS -->
+      <div class="proj-card" id="projCard13" data-category="academic">
         <div class="proj-head">
           <span class="proj-title">Grievance MS</span>
-          <span class="proj-badge">web app</span>
+          <div class="proj-header-right">
+            <span class="proj-badge">Web Application</span>
+          </div>
         </div>
-        <p class="dim" style="font-size:12px; margin-bottom:10px;">Student grievance management system</p>
+        <p class="dim" style="font-size:12px; margin-bottom:10px;">Student grievance management system with role-based access control and audit trail</p>
         <ul class="proj-desc">
-          <li>Role-based access control for students, teachers &amp; admin</li>
-          <li>Full lifecycle workflow with an append-only audit trail</li>
-          <li>Admin dashboards with real-time statistics via EF Core</li>
+          <li>Role-based access control for students, faculty, and administrators with secure authentication</li>
+          <li>Structured ticket resolution lifecycle featuring an append-only audit trail for transparent oversight</li>
+          <li>Administrative analytics dashboard displaying grievance statistics and resolution status via Entity Framework Core</li>
         </ul>
         <div class="proj-stack"><span>ASP.NET Core</span><span>EF Core</span><span>SQL Server</span><span>C#</span><span>Bootstrap</span></div>
       </div>
 
-      <div class="proj-card" id="projCard8">
+      <!-- 14. Farmer Guidance -->
+      <div class="proj-card" id="projCard14" data-category="academic ai-iot">
         <div class="proj-head">
           <span class="proj-title">Farmer Guidance</span>
-          <span class="proj-badge">AI / IoT</span>
+          <div class="proj-header-right">
+            <span class="proj-badge">AI / IoT</span>
+          </div>
         </div>
-        <p class="dim" style="font-size:12px; margin-bottom:10px;">AI-ML soil &amp; crop advisory system</p>
+        <p class="dim" style="font-size:12px; margin-bottom:10px;">AI-ML soil analysis and crop advisory system integrating physical sensors and predictive models</p>
         <ul class="proj-desc">
-          <li>NPK, soil moisture &amp; DHT11 sensors capture live soil data</li>
-          <li>ML models analyze soil health from sensor readings</li>
-          <li>Recommends suitable crop types and fertilizer additions</li>
+          <li>Hardware sensor array (NPK, soil moisture, DHT11) capturing real-time soil and ambient parameters</li>
+          <li>Machine learning models analyzing soil nutrient health against multi-class agricultural datasets</li>
+          <li>Generates automated recommendations for optimal crop selection and customized fertilizer quantities</li>
         </ul>
         <div class="proj-stack"><span>Python</span><span>ML Libraries</span><span>Arduino</span><span>IoT Sensors</span></div>
       </div>
@@ -1500,7 +1707,7 @@
 <footer>
   <span class="prompt">$</span> echo "thanks for scrolling — now go build something." <span class="cursor" style="width:7px;height:13px;"></span>
   <a href="#top" class="back-top">↑ back to top</a>
-  <div style="margin-top: 18px; color: var(--text-faint); font-size: 10.5px;">Last updated: July 2026</div>
+  <div style="margin-top: 18px; color: var(--text-faint); font-size: 10.5px;">Last updated: October 2026</div>
 </footer>
 
 <script>
@@ -1812,13 +2019,40 @@
   }
 
   // ============================
+  // PROJECT FILTER TABS
+  // ============================
+  const filterBtns = document.querySelectorAll('.proj-filter-btn');
+  const projCards = document.querySelectorAll('.proj-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+
+      projCards.forEach(card => {
+        if (filter === 'all') {
+          card.classList.remove('filtered-out');
+        } else {
+          const categories = card.getAttribute('data-category') || '';
+          if (categories.includes(filter)) {
+            card.classList.remove('filtered-out');
+          } else {
+            card.classList.add('filtered-out');
+          }
+        }
+      });
+    });
+  });
+
+  // ============================
   // BOOT SEQUENCE TYPING
   // ============================
   const bootLines = [
     { p: '$', c: 'whoami' },
     { p: '>', c: 'sreehari-s', out: true },
     { p: '$', c: 'cat role.txt' },
-    { p: '>', c: 'Aspiring DevOps Engineer, currently learning', out: true }
+    { p: '>', c: 'Junior DevOps Engineer — Cloud, CI/CD & Observability', out: true }
   ];
   const bootEl = document.getElementById('bootOutput');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1877,7 +2111,7 @@
       { type: 'result', text: '  <span style="color:var(--primary)">skills</span>     — list my tech stack' },
       { type: 'result', text: '  <span style="color:var(--primary)">status</span>     — current availability' },
       { type: 'result', text: '  <span style="color:var(--primary)">whoami</span>     — about me in one line' },
-      { type: 'result', text: '  <span style="color:var(--primary)">projects</span>   — list my projects' },
+      { type: 'result', text: '  <span style="color:var(--primary)">projects</span>   — list featured projects' },
       { type: 'result', text: '  <span style="color:var(--primary)">clear</span>      — clear terminal' },
       { type: 'result', text: '  <span style="color:var(--primary)">sudo hire</span>  — 😏' },
     ],
@@ -1903,27 +2137,34 @@
       { type: 'result', text: '📍 Kollam, Kerala, India' },
     ],
     skills: () => [
-      { type: 'info', text: '⚙️ Tech Stack:' },
-      { type: 'result', text: '  Foundations: Linux, Git, Bash, AWS EC2, SQL, Ansible, Terraform' },
-      { type: 'result', text: '  DevOps:      Docker, Jenkins, GitHub Actions, K8s, Argo CD, SonarQube, Maven' },
-      { type: 'result', text: '  Languages:   Python, C, C#, JavaScript, Dart' },
-      { type: 'result', text: '  Tools:       .NET Core, Flutter, MySQL, IoT' },
-      { type: 'result', text: '  <span style="color:var(--primary)">Learning:</span>    AWS SA, Monitoring & Observability' },
+      { type: 'info', text: '⚙️ Tech Stack &amp; Core Competencies:' },
+      { type: 'result', text: '  Cloud &amp; IaC:     AWS (Lambda, ECS, EKS, DynamoDB, VPC, ALB, CloudWatch, SNS), Terraform, Ansible' },
+      { type: 'result', text: '  Kubernetes:      Amazon EKS, K3s, Helm, Argo CD (GitOps), AWS Load Balancer Controller, Ingress' },
+      { type: 'result', text: '  CI/CD &amp; Sec:     Jenkins, GitHub Actions, GitHub OIDC, SonarQube, Pytest, Docker Hub, AWS ECR' },
+      { type: 'result', text: '  Observability:   Prometheus, Grafana, Loki, Grafana Alloy, Node Exporter, PromQL' },
+      { type: 'result', text: '  Languages/DB:    Python, FastAPI, Bash, PostgreSQL, pgvector, SQL, C#, JavaScript' },
+      { type: 'result', text: '  <span style="color:var(--primary)">Learning:</span>        GCP (Google Cloud Platform), Microsoft Azure, AWS Solutions Architect' },
     ],
     status: () => [
-      { type: 'result', text: '🟢 <span style="color:var(--green)">Open to opportunities</span> — internships & junior DevOps roles' },
+      { type: 'result', text: '🟢 <span style="color:var(--green)">Open to opportunities</span> — Junior DevOps Engineer roles &amp; Cloud internships' },
     ],
     whoami: () => [
-      { type: 'result', text: 'Sreehari S — CSE graduate, aspiring DevOps engineer, building in public.' },
+      { type: 'result', text: 'Sreehari S — Junior DevOps Engineer specializing in AWS, Terraform, Docker, Kubernetes, CI/CD &amp; Observability.' },
     ],
     projects: () => [
-      { type: 'info', text: '📂 Projects:' },
-      { type: 'result', text: '  1. <span style="color:var(--primary)">Spring Boot CI/CD Pipeline</span> — Jenkins + SonarQube + Docker + K8s + Argo CD GitOps' },
-      { type: 'result', text: '  2. <span style="color:var(--primary)">Automated Cloud Deployment</span> — AWS EC2 + Terraform + Ansible + Jenkins CI/CD' },
-      { type: 'result', text: '  3. <span style="color:var(--primary)">Wisecow K8s CI/CD</span> — Kubernetes + GitHub Actions + HTTPS Ingress + Monitoring' },
-      { type: 'result', text: '  4. <span style="color:var(--text)">NovaMotion</span> — Multimodal smart wheelchair (Flutter, Python, ESP32)' },
-      { type: 'result', text: '  5. <span style="color:var(--text)">Grievance MS</span> — Student grievance system (ASP.NET Core, C#)' },
-      { type: 'result', text: '  6. <span style="color:var(--text)">Farmer Guidance</span> — AI-ML soil advisory (Python, Arduino, IoT)' },
+      { type: 'info', text: '📂 Featured Projects (ordered by DevOps depth):' },
+      { type: 'result', text: '  1. <span style="color:var(--primary)">CloudOps360</span> — Incident detection, AWS Lambda, SNS &amp; Prometheus/Grafana/Loki' },
+      { type: 'result', text: '  2. <span style="color:var(--primary)">AWS ECS Fargate</span> — Terraform IaC, VPC, ALB, GitHub Actions CI/CD &amp; OIDC' },
+      { type: 'result', text: '  3. <span style="color:var(--primary)">NutriFlow GitOps</span> — AWS EKS, Terraform, Jenkins, SonarQube &amp; Argo CD' },
+      { type: 'result', text: '  4. <span style="color:var(--primary)">Multi-VM Monitoring</span> — AWS EC2, Node Exporter, Prometheus, Grafana &amp; PromQL' },
+      { type: 'result', text: '  5. <span style="color:var(--primary)">K3s Deployment</span> — Lightweight K8s cluster &amp; isolated Prometheus monitoring' },
+      { type: 'result', text: '  6. <span style="color:var(--primary)">AWS ALB Ingress</span> — EKS AWS Load Balancer Controller, Helm &amp; TLS' },
+      { type: 'result', text: '  7. <span style="color:var(--primary)">SECLOCK DevSecOps</span> — Jenkins pipeline, SonarQube, AWS ECR &amp; Argo CD GitOps' },
+      { type: 'result', text: '  8. <span style="color:var(--primary)">Automated Cloud</span> — Terraform EC2, Ansible config mgmt, Jenkins &amp; Docker' },
+      { type: 'result', text: '  9. <span style="color:var(--primary)">Spring Boot GitOps</span> — Jenkins, SonarQube, Docker, K8s &amp; Argo CD' },
+      { type: 'result', text: ' 10. <span style="color:var(--primary)">CloudRAG-DevOps</span> — FastAPI, PostgreSQL, pgvector &amp; Docker Compose' },
+      { type: 'result', text: ' 11. <span style="color:var(--primary)">Wisecow K8s CI/CD</span> — GitHub Actions, GHCR, NGINX Ingress TLS &amp; monitoring' },
+      { type: 'result', text: ' 12. <span style="color:var(--text)">NOVAMOTION</span> — Smart wheelchair (Raspberry Pi 5, ESP32, Computer Vision, Flutter)' },
     ],
     clear: () => 'CLEAR',
     'sudo hire': () => [
